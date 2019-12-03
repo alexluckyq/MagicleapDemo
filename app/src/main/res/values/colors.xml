@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#D32323</color>
+    <color name="colorPrimaryDark">@android:color/black</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="navigationBarColor">#aaabac</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="lightGrayColor">#BBBBBB</color>
+    <color name="mediumGrayColor">#7F7F7F</color>
+    <color name="darkGrayColor">#777777</color>
+    <color name="groupedRecyclerViewBackground">#EEEEEE</color>
+</resources>

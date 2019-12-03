@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="coffeeDetailData"
+            type="com.magicleap.assignment.model.Coffee" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/margin_xlarge">
+
+            <TextView
+                android:id="@+id/coffeeNameTextView"
+                android:layout_marginTop="@dimen/margin_large"
+                style="@style/LareTextViewBlackNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:layout_marginStart="@dimen/margin_large"
+                android:text="@{coffeeDetailData.name}"
+                android:textSize="30sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text= "test test"/>
+
+            <View
+                android:id="@+id/separaterView"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginRight="@dimen/margin_large"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:background="@color/mediumGrayColor"
+                app:layout_constraintTop_toBottomOf="@+id/coffeeNameTextView"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/coffeeDescriptionTextView"
+                style="@style/MediumTextViewGreyNormal"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginRight="@dimen/margin_large"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:text="@{coffeeDetailData.longDescription}"
+                app:layout_constraintTop_toBottomOf="@+id/separaterView"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text= "Affogato is an Italian dessert that refers to a scoop of gelato or ice cream that has a shot of hot espresso poured over it."/>
+
+            <ImageView
+                android:id="@+id/coffeeImageView"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginRight="@dimen/margin_large"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:src="@drawable/default_thumbnail"
+                android:scaleType="fitCenter"
+                app:layout_constraintTop_toBottomOf="@+id/coffeeDescriptionTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/updatedAtTextView"
+                style="@style/SmallTextViewGreyNormal"
+                android:textSize="12sp"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginRight="@dimen/margin_large"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:text="@{@string/updated(coffeeDetailData.formattedTimeString)}"
+                app:layout_constraintTop_toBottomOf="@+id/coffeeImageView"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text= "Updated Nov 10, 2015"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

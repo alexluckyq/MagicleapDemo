@@ -1,0 +1,6 @@
+<resources>
+    <string name="magic_leap_coffee">Magic Leap Coffee</string>
+    <string name="app_name">Magic Leap Coffee</string>
+    <string name="no_results">No Results</string>
+    <string name="updated">Updated %1$s</string>
+</resources>
